@@ -1,13 +1,13 @@
 function mortgageCalculation() {
 
-    let APR = document.getElementById("APR").value / 12;
+    let APR = document.getElementById("APR").value / 1200;
     let term = document.getElementById("loanTerms").value * 12;
     let amount = document.getElementById("amount").value;
 
 
     if (isInputEmpty(APR, term, amount)) {
-        
-        let monthlyPayment = amount * APR * (Math.pow(1 + APR, term)) / (Math.pow(1 + APR, term) - 1)
+        debugger
+        let monthlyPayment = amount * (APR * Math.pow((1 + APR), term)) / (Math.pow((1 + APR), term) - 1)
 
         return document.getElementById("payment").value = "$" + monthlyPayment.toFixed(2);
     }
