@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css.css" />
+    <script src="script.js"></script>
+    <title>Mortgage Calculator</title>
+  </head>
+  <body>
+    <h1>Mortgage Calculator</h1>
+
+    <h3>Enter your Loan imformation to calculate monthly payment</h3>
+
+    <form action="" method="GET" class="form-Parent">
+      
+        <div class="form-content">
+            <label for="APR">Enter your APR<span class="asterix">*</span></label><br>
+            <input type="text" name="APR" id="APR" min="0" max="25" maxlength="5" step="0.01" placeholder="3.21" required>
+        </div>
+
+        <div class="form-content">
+            <label for="loanTerms">Enter the Loan Term in Years<span class="asterix">*</span></label><br>
+            <input type="text" name="loanTerms" id="loanTerms" min="1" max="40" maxlength="2" required>
+        </div>
+
+        <div class="form-content">
+            <label for="loanAmount">Enter the Loan Amount in dollars<span class="asterix">*</span></label><br>
+            <input type="text" name="amount" id="amount" required >
+        </div>
+
+        <div class="form-content">
+            <label for="payment">Monthly Payment amount</label><br>
+            <input type="text" name="payment" id="payment" readonly>
+        </div>
+
+        <div id="error-Message"></div>
+
+        <div id="buttonsOnForm">
+            <button onclick="clearForm()" id="clear" type="button">Clear Form</button>
+            <button onclick="mortgageCalculation()" type="button" id="calculate">Calculate Payment</button>
+        </div>
+
+        <div><span class="asterix">*</span>Required</div>
+
+
+    </form>
+  </body>
+</html>
